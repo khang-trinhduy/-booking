@@ -1,0 +1,117 @@
+:root {
+  --font-color: white;
+}
+
+body {
+  margin: unset;
+}
+
+.wrapper {
+  background-image: url(assets/images/bg_1920x1080.jpg);
+  background-size: cover;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+}
+
+.background {
+  backdrop-filter: blur(1.75px);
+  height: 100%;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 0.5fr 1fr 1fr 1fr 0.5fr;
+  justify-items: center;
+  align-items: center;
+}
+
+h1,
+h2 {
+  margin: unset;
+}
+
+.header {
+  text-align: right;
+}
+
+.header1 {
+  font-size: 24px;
+  color: var(--font-color);
+  text-transform: uppercase;
+  word-spacing: -0.2rem;
+  font-weight: 500;
+}
+
+.header2 {
+  font-size: 20px;
+  color: var(--font-color);
+  word-spacing: -0.2rem;
+  font-weight: 500;
+}
+
+.header3 {
+  font-size: 54px;
+  text-transform: uppercase;
+  color: var(--font-color);
+}
+
+.login-form {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  color: black;
+  font-weight: 555;
+  font-size: 20px;
+  height: 150px;
+  border-radius: 8px;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+}
+
+.login-form p {
+  margin: unset;
+  font-size: 16px;
+  font-style: italic;
+}
+
+.login-form a {
+  text-decoration: unset;
+  color: cornflowerblue;
+}
+
+.logo {
+  max-height: 100px;
+}
+
+.language {
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  display: inline-block;
+  padding: 10px 12px;
+  cursor: pointer;
+  color: var(--font-color);
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+
+.button {
+  background: teal;
+  padding: 10px 12px;
+  display: grid;
+  max-width: 120px;
+  color: var(--font-color);
+  grid-template-columns: 1fr 3fr;
+  align-items: center;
+  justify-items: center;
+  cursor: pointer;
+  transition: all 0.2s linear;
+}
+
+.button:hover {
+  opacity: 0.75;
+}
+
+.button p {
+  margin: unset;
+}
