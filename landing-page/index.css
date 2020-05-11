@@ -31,6 +31,8 @@ h2 {
 }
 
 .header {
+  display: grid;
+  grid-template-rows: 2.5fr 1.2fr 0.8fr;
   text-align: right;
 }
 
@@ -85,14 +87,18 @@ h2 {
 }
 
 .language {
-  border: 1px solid rgba(0, 0, 0, 0.125);
-  display: inline-block;
-  padding: 10px 12px;
-  cursor: pointer;
   color: var(--font-color);
   position: fixed;
   top: 0;
   right: 0;
+}
+
+.language-button {
+    padding: 10px 12px;
+    cursor: pointer;
+    color: var(--font-color);
+    background: transparent;
+    border: unset;
 }
 
 .button {
@@ -114,4 +120,26 @@ h2 {
 
 .button p {
   margin: unset;
+}
+
+@media (max-width: 700px) {
+  .login-form {
+    max-width: 300px;
+  }
+
+  .background {
+    grid-template-rows: 0.2fr 1fr 1fr 1fr 0.2fr;
+  }
+
+  .header3 {
+    font-size: 36px;
+  }
+
+  .header1 {
+    font-size: 20px;
+  }
+
+  .header2 {
+    font-size: 16px;
+  }
 }

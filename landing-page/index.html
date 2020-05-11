@@ -46,9 +46,24 @@
           <div class="helper"></div>
         </div>
         <div class="language">
-          English
+          <button aria-label="english" class="language-button">
+            english
+          </button>
         </div>
       </div>
     </div>
+
+    <script>
+      const langButton = document.querySelector(".language-button");
+      function changeLanguage({ target }) {
+        const language =
+          target.getAttribute("aria-label") === "english"
+            ? "vietnamese"
+            : "english";
+        target.setAttribute("aria-label", language);
+        target.textContent = language;
+      }
+      langButton.addEventListener("click", changeLanguage);
+    </script>
   </body>
 </html>

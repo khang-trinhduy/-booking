@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="detail.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="wrapper">
+        <div class="menu">
+          <img src="assets/images/logo.png" alt="annhome logo" />
+          <h2 class="menu-item active">Home</h2>
+          <h2 class="menu-item">Bookings</h2>
+          <h2 class="menu-item">Contacts</h2>
+          <h2 class="menu-item">Salekit</h2>
+          <h2 class="menu-item">Others</h2>
+        </div>
+        <div class="dashboard">
+          <div class="top">
+            <div class="search">
+              <svg
+                class="search-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="feather feather-search"
+              >
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+              <input
+                class="search-bar"
+                type="text"
+                placeholder="Search anything"
+              />
+            </div>
+            <div class="profile">
+              <img
+                class="avatar"
+                src="https://source.unsplash.com/random/207x207"
+                alt="user's avatar"
+              />
+              <div class="user-setting">
+                <ul>
+                  <li>
+                    Account
+                  </li>
+                  <li>
+                    Option
+                  </li>
+                  <li>
+                    Help
+                  </li>
+                  <li>
+                    Logout
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="main">
+            <div class="content">
+              <h1 class="header">Contact</h1>
+              <div class="recent">
+                <div class="expand-line">
+                  <p class="header small">Recent contacts</p>
+                  <div class="line"></div>
+                  <div class="icon-button">
+                    <svg class="icon"></svg>
+                    <p class="text">Hide</p>
+                  </div>
+                </div>
+                <div class="cards">
+                  <div class="card"></div>
+                  <div class="card"></div>
+                </div>
+              </div>
+              <div class="list">
+                <div class="expand-line">
+                  <p class="header small">All contacts</p>
+                  <div class="line"></div>
+                  <div class="icon-button">
+                    <svg class="icon"></svg>
+                    <p class="text">Hide</p>
+                  </div>
+                </div>
+                <div class="table"></div>
+                <div class="paginator"></div>
+              </div>
+              <div class="stars">
+                <div class="expand-line">
+                  <p class="header small">Starred contacts</p>
+                  <div class="line"></div>
+                  <div class="icon-button">
+                    <svg class="icon"></svg>
+                    <p class="text">Hide</p>
+                  </div>
+                </div>
+                <div class="cards">
+                  <div class="card"></div>
+                </div>
+              </div>
+            </div>
+            <div class="action">
+              <div class="booking icon-button">
+                <svg class="icon"></svg>
+                <p class="text">Booking</p>
+              </div>
+              <div class="contact icon-button">
+                <svg class="icon"></svg>
+                <p class="text">Contact</p>
+              </div>
+              <div class="salekit icon-button">
+                <svg class="icon"></svg>
+                <p class="text">Salekit</p>
+              </div>
+              <div class="passport icon-button">
+                <svg class="icon"></svg>
+                <p class="text">Passport</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="help icon-button">
+        <svg class="icon help-icon"></svg>
+        <a href="#" class="text help-text">Help</a>
+      </div>
+    </div>
+
+    <script>
+      const menuItems = document.querySelectorAll(".menu-item");
+      const avatar = document.querySelector(".avatar");
+      function openSetting({ target, classList }) {
+        target.classList.toggle("open");
+      }
+      avatar.addEventListener("click", openSetting);
+      function switchMenu({ target }) {
+        const currentMenu = document.querySelector(".menu-item.active");
+        currentMenu.classList.remove("active");
+        target.classList.add("active");
+      }
+      menuItems.forEach((item) => {
+        item.addEventListener("click", switchMenu);
+      });
+    </script>
+  </body>
+</html>
